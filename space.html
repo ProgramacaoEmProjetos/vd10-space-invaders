@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space Invaders</title>
+        <style>
+
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #canva {
+                width: 800px;
+                height: 600px;
+                border: 1px solid silver;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <canvas id="canva" width="800" height="600">
+                Não suportado!
+            </canvas>
+        </div>
+        
+        <!-- Importa a o motor de jogo. -->
+        <script src="engine.js"></script>
+
+        <!-- Importa o protótipo de objeto de jogo. -->
+        <script src="game_objects.js"></script>
+
+        <!-- Importa a interface do jogo. -->
+        <script src="game_ui.js"></script>
+
+        <!-- Importa o objeto de temporizador, deve serimportado antes de enemy e bullet pois
+        será utilizado por eles. -->
+        <script src="timer.js"></script>
+
+        <!-- Importa o objeto do projetil, ele deve ser importado antes
+        do player e no enemy pois ambos utilizarão ele. -->
+        <script src="bullet.js"></script>
+
+        <!-- Importa o objeto que representará o jogador. -->
+        <script src="player.js"></script>
+
+        <!-- Importa o objeto das defesas do jogo. -->
+        <script src="shield.js"></script>
+
+        <!-- Importa o objeto dos inimigos. -->
+        <script src="enemy.js"></script>
+
+        <!-- Importa o codigo que une todos os objetos
+            e prepara as interações. -->
+        <script src="space.js"></script>
+
+    </body>
+</html>
